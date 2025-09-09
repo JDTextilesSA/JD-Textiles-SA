@@ -1,5 +1,5 @@
 const CACHE_NAME = 'jd-textiles-v1';
-const OFFLINE_URL = '/JD-Textiles-SA/';
+const OFFLINE_URL = '/';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(

@@ -1,0 +1,196 @@
+/* Estilos generales del cuerpo */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Contenedor principal de la etiqueta */
+.etiqueta {
+  position: relative;
+  background-color: #ffffff;
+  width: 16cm;
+  height: 10.5cm;
+  padding: 0;
+  /* manejamos márgenes individuales */
+  box-sizing: border-box;
+  border: 2px dashed #9e9e9e;
+}
+
+/* Márgenes internos de la etiqueta */
+.etiqueta * {
+  box-sizing: border-box;
+}
+
+/* Título fijo en esquina superior izquierda */
+.titulo {
+  position: absolute;
+  top: 0.5cm;
+  /* margen superior */
+  left: 0.7cm;
+  /* margen izquierdo */
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* encabezado1 debajo del título */
+.encabezado1 {
+  position: absolute;
+  top: 1.5cm;
+  left: 0.7cm;
+  /* alineado al margen izquierdo */
+  font-size: 15px;
+  margin: 0;
+}
+
+/* encabezado2 en lado izquierdo */
+.encabezado2 {
+  position: absolute;
+  top: 1cm;
+  right: 0.5cm;
+  /* margen derecho */
+  font-size: 14px;
+  text-align: right;
+  margin: 0;
+}
+
+/* Línea para el nombre de la etiqueta */
+.linea-nombre {
+  position: absolute;
+  top: 3.7cm;
+  left: 0.7cm;
+  right: 0.5cm;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+/* Contenedor inferior (cuadrado + info) */
+
+/* Cuadrado con ROLL # */
+.cuadrado-inferior {
+  width: 4.3cm;
+  height: 4.3cm;
+  top: 5cm;
+  left: 0.7cm;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+/* ROLL # label y input */
+.roll-label {
+  top: 1cm;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.roll-input {
+  width: 80%;
+  top: 25px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  outline: none;
+  position: relative;
+  border: none;
+}
+
+.inferior {
+  position: relative;
+  top: 5cm;
+  left: 6cm;
+  width: 9.5cm;
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.info-inferior {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 9.5cm;
+}
+
+.campo {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #000000;
+}
+
+.campo-flex {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid #000000;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.linea-info-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .etiqueta,
+  .etiqueta * {
+    visibility: visible;
+  }
+
+  .etiqueta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16cm;
+    height: 10.5cm;
+    box-sizing: border-box;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+.buttonContainer {
+  margin-top: 10px;
+}
+
+button {
+  background: #000;
+  cursor: pointer;
+  border: 0;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+}

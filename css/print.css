@@ -1,28 +1,7 @@
-@media print {
-    body {
-        margin: 0;
-        padding: 0;
-    }
+body.imprimiendo > *:not(.etiqueta) {
+  display: none;
+}
 
-    body * {
-        visibility: hidden;
-    }
-
-    .etiqueta,
-    .etiqueta * {
-        visibility: visible;
-    }
-
-    .etiqueta {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 16cm;
-        height: 10.5cm;
-        box-sizing: border-box;
-    }
-
-    button {
-        display: none;
-    }
+body.imprimiendo {
+  background-color: white;
 }

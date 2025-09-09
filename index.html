@@ -18,9 +18,11 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#000000">
   <script src="js/install-pwa.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 </head>
 
-<body class="">
+<body class="" style="height: 100vh !important;">
 
   <div class="etiqueta">
     <!-- Encabezado fijo -->
@@ -37,7 +39,7 @@
     <!-- Cuadrado inferior-->
     <div class="cuadrado-inferior">
       <div class="roll-label">ROLL #</div>
-      <input type="text" class="roll-input" placeholder=" ">
+      <input type="text" class="roll-input" placeholder=" " id="rollInput">
     </div>
 
     <div class="inferior">
@@ -68,16 +70,14 @@
 
       </div>
     </div>
-  </div> 
+  </div>
 
-  <div class=" buttonContainer">
-          <button onclick="imprimirEtiqueta()">Imprimir etiqueta</button>
-        </div>
+  <div class="buttonContainer">
+    <button onclick="validarYImprimir()">Imprimir etiqueta</button>
+  </div>
 
-        <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
-
 </html>
-

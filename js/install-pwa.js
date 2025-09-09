@@ -25,7 +25,7 @@ btn.addEventListener('click', async () => {
 
 // Registra service worker (si el navegador lo soporta)
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js').catch((err) => {
+    navigator.serviceWorker.register('/JD-Textiles-SA/service-worker.js').catch((err) => {
         console.warn('SW registro fallido:', err);
     });
 }
